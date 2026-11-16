@@ -1,0 +1,363 @@
+.hero {
+  position: relative;
+  min-height: 548px;
+  overflow: hidden;
+  isolation: isolate;
+  border-bottom: 1px solid var(--border);
+  background: #07111b;
+}
+.heroImage {
+  position: absolute;
+  width: 100%;
+  height: 112%;
+  left: 0;
+  top: -6%;
+  object-fit: contain;
+  object-position: right center;
+  z-index: -3;
+  will-change: transform;
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  background:
+    linear-gradient(90deg, #07111b5e 0%, #07111b20 40%, transparent 70%),
+    linear-gradient(0deg, #07111be6, transparent 19%, transparent 85%, #07111b38);
+}
+.heroInner {
+  position: relative;
+  padding: 63px 0 37px 125px;
+}
+.heroContent {
+  max-width: 660px;
+}
+.label {
+  font-size: 10px;
+  letter-spacing: 0.23em;
+  color: #a3cfff;
+}
+.title {
+  font-size: clamp(48px, 4.65vw, 76px);
+  letter-spacing: -0.055em;
+  line-height: 1.12;
+  margin-top: 23px;
+}
+.title span {
+  background: linear-gradient(#5bb2ff, #2786ef);
+  color: transparent;
+  background-clip: text;
+}
+.subtitle {
+  color: #b3c3d4;
+  font-size: clamp(15px, 1.42vw, 22px);
+  letter-spacing: -0.025em;
+  margin-top: 4px;
+}
+.divider {
+  width: 47px;
+  height: 2px;
+  background: var(--accent);
+  margin-block: 23px 17px;
+}
+.description {
+  max-width: 470px;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #b9c9d9;
+}
+.description strong {
+  color: var(--accent);
+  font-weight: 500;
+}
+.ctas {
+  display: flex;
+  gap: 15px;
+  margin-top: 26px;
+}
+.expertise {
+  margin-top: 31px;
+  display: flex;
+  align-items: center;
+  gap: 23px;
+  max-width: 625px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid var(--border);
+}
+.expertise a {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 11px;
+  color: #c3d0de;
+  white-space: nowrap;
+}
+.expertise a + a {
+  border-left: 1px solid var(--border);
+  padding-left: 23px;
+}
+.expertise a:hover {
+  color: var(--bright);
+}
+.instrument {
+  position: absolute;
+  right: 4%;
+  bottom: 50px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #b2d6ed;
+  font-family: monospace;
+  font-size: 8px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  opacity: 0.7;
+}
+.instrument::before {
+  content: '';
+  width: 5px;
+  height: 5px;
+  background: #6bd6ff;
+  border-radius: 50%;
+  box-shadow: 0 0 12px #2ba6ff;
+}
+.hologram {
+  position: absolute;
+  width: 290px;
+  height: 140px;
+  background: radial-gradient(ellipse, #289cff1c, transparent 65%);
+  right: 18%;
+  bottom: 15px;
+  z-index: -1;
+  pointer-events: none;
+}
+.animated .hologram {
+  animation: pulse 5s ease-in-out infinite alternate;
+}
+.featured {
+  padding-block: 28px 42px;
+  background: radial-gradient(ellipse at 50% 0, #18334629, transparent 75%);
+}
+.sectionTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+  gap: 15px;
+}
+.sectionTop :global(.text-link) {
+  font-size: 11px;
+}
+.featuredGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+.intro {
+  padding-block: 56px;
+  border-top: 1px solid var(--border);
+}
+.introInner {
+  display: grid;
+  grid-template-columns: 1.25fr 1fr;
+  gap: 100px;
+  align-items: start;
+}
+.intro h2 {
+  font-size: 34px;
+  letter-spacing: -0.04em;
+  line-height: 1.24;
+  margin-block: 16px;
+  max-width: 520px;
+}
+.intro p {
+  color: var(--muted);
+  font-size: 13px;
+  max-width: 490px;
+}
+.introLinks {
+  display: grid;
+}
+.introLinks a {
+  display: grid;
+  grid-template-columns: 36px 1fr 20px;
+  align-items: center;
+  gap: 18px;
+  padding: 20px 0;
+  border-bottom: 1px solid var(--border);
+}
+.introLinks a:first-child {
+  padding-top: 8px;
+}
+.introLinks a > svg:first-child {
+  color: var(--bright);
+}
+.introLinks strong {
+  font-family: var(--heading);
+  display: block;
+  font-size: 16px;
+  font-weight: 500;
+}
+.introLinks small {
+  color: var(--subtle);
+  font-size: 11px;
+}
+.introLinks a:hover strong {
+  color: var(--bright);
+}
+@keyframes pulse {
+  to {
+    opacity: 0.35;
+    transform: scale(0.93);
+  }
+}
+@media (min-width: 1800px) {
+  .hero {
+    min-height: 635px;
+  }
+  .heroInner {
+    padding-top: 80px;
+    padding-left: 160px;
+  }
+  .heroContent {
+    max-width: 750px;
+  }
+  .description {
+    font-size: 18px;
+    max-width: 540px;
+  }
+  .expertise {
+    margin-top: 40px;
+  }
+  .featured {
+    padding-block: 35px 50px;
+  }
+}
+@media (max-width: 1100px) {
+  .heroInner {
+    padding-left: 95px;
+  }
+  .heroImage {
+    object-position: 60% center;
+  }
+  .hero::before {
+    background: linear-gradient(90deg, #07111bf2, #07111bbd 45%, #07111b22 85%);
+  }
+  .heroContent {
+    max-width: 540px;
+  }
+  .title {
+    font-size: 54px;
+  }
+  .expertise {
+    gap: 15px;
+  }
+  .expertise a + a {
+    padding-left: 15px;
+  }
+  .expertise a {
+    gap: 7px;
+    font-size: 10px;
+  }
+  .instrument {
+    display: none;
+  }
+  .introInner {
+    gap: 50px;
+  }
+}
+@media (max-width: 767px) {
+  .hero {
+    min-height: 698px;
+  }
+  .heroInner {
+    padding: 39px 0 240px;
+  }
+  .heroImage {
+    height: 66%;
+    width: 150%;
+    max-width: none;
+    left: -50%;
+    top: auto;
+    bottom: -3%;
+    object-position: 83% 50%;
+  }
+  .hero::before {
+    background: linear-gradient(
+      180deg,
+      #07111b 0%,
+      #07111b 38%,
+      #07111be0 53%,
+      #07111b15 76%,
+      #07111b 100%
+    );
+  }
+  .label {
+    font-size: 8px;
+    letter-spacing: 0.15em;
+  }
+  .title {
+    font-size: clamp(38px, 8.8vw, 62px);
+    margin-top: 23px;
+  }
+  .subtitle {
+    font-size: 14px;
+    margin-top: 8px;
+  }
+  .divider {
+    margin-block: 21px 16px;
+  }
+  .description {
+    font-size: 14px;
+    max-width: 425px;
+  }
+  .ctas {
+    gap: 12px;
+    margin-top: 22px;
+  }
+  .ctas :global(.button) {
+    padding: 11px 16px;
+    font-size: 12px;
+  }
+  .expertise {
+    margin-top: 26px;
+    gap: 13px;
+    flex-wrap: wrap;
+    border: 0;
+  }
+  .expertise a {
+    font-size: 9px;
+    gap: 5px;
+  }
+  .expertise a svg {
+    width: 17px;
+  }
+  .expertise a + a {
+    padding-left: 10px;
+  }
+  .featuredGrid {
+    grid-template-columns: 1fr;
+    gap: 13px;
+  }
+  .featured {
+    padding-block: 16px 32px;
+  }
+  .sectionTop {
+    margin-bottom: 20px;
+  }
+  .sectionTop :global(.text-link) {
+    font-size: 10px;
+    gap: 5px;
+  }
+  .intro {
+    padding-block: 38px;
+  }
+  .introInner {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  .intro h2 {
+    font-size: 29px;
+  }
+}

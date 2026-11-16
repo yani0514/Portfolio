@@ -1,0 +1,37 @@
+export const education = [
+  {
+    id: 'luxembourg',
+    name: 'University of Luxembourg',
+    location: 'Luxembourg',
+    title: 'Bachelor of Computer Science',
+    period: 'Current · third year, November 2026',
+    badge: 'Academic foundation',
+    body: 'Building a foundation in computer science, mathematics and software engineering, with growing interests in AI, security and systems that connect software to the physical world.',
+    courses: [
+      'Computer Science',
+      'Software Engineering',
+      'Mathematics',
+      'Artificial Intelligence',
+      'Generative AI',
+      'Security',
+    ],
+    projects: ['multi-coverage-visualization', 'generative-ai', 'tutti'],
+  },
+  {
+    id: 'vienna',
+    name: 'TU Wien',
+    location: 'Vienna, Austria',
+    title: 'Erasmus exchange semester',
+    period: 'Spring 2026',
+    badge: 'A defining engineering chapter',
+    body: 'An exchange semester that connected software foundations to practical robotics. Developing autonomous vehicle control software made the feedback loop between algorithms, sensing and motion tangible.',
+    courses: [
+      'Autonomous Racing Cars',
+      'Introduction to Machine Learning',
+      'Introduction to Deep Learning',
+      'Introduction to Security',
+      'Web Engineering',
+    ],
+    projects: ['autonomous-racing-cars', 'artmart', 'machine-learning'],
+  },
+];

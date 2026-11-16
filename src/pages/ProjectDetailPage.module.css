@@ -1,0 +1,268 @@
+.hero {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 55px;
+  align-items: center;
+  margin-block: 35px 30px;
+}
+.hero h1 {
+  font-size: clamp(37px, 4vw, 56px);
+  line-height: 1.08;
+  letter-spacing: -0.05em;
+  margin-block: 20px;
+}
+.hero p {
+  color: var(--muted);
+  font-size: 14px;
+  margin-bottom: 23px;
+}
+.heroVisual {
+  width: 100%;
+  border: 1px solid var(--border);
+  border-radius: 9px;
+}
+.visualCaption {
+  text-align: right;
+  font-size: 9px;
+  color: var(--subtle);
+  margin-top: 8px;
+}
+.projectMeta {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  border-block: 1px solid var(--border);
+  padding-block: 22px;
+  gap: 30px;
+  margin-bottom: 42px;
+}
+.projectMeta dt {
+  font-size: 9px;
+  color: var(--subtle);
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  margin-bottom: 9px;
+}
+.projectMeta dd {
+  font-size: 12px;
+  color: #c4d6e7;
+}
+.body {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 190px;
+  gap: 55px;
+}
+.article section {
+  margin-bottom: 43px;
+  scroll-margin-top: 105px;
+}
+.article section > h2 {
+  font-size: 26px;
+  letter-spacing: -0.04em;
+  margin-bottom: 20px;
+  display: flex;
+  gap: 14px;
+  align-items: center;
+}
+.article section > h2 > span {
+  font-family: monospace;
+  font-size: 10px;
+  letter-spacing: 0;
+  color: #6495b7;
+}
+.article p {
+  color: var(--muted);
+  font-size: 13px;
+}
+.role {
+  border-left: 2px solid #378bd3;
+  padding: 13px 20px;
+  background: #2b8bdb08;
+  margin-top: 22px;
+}
+.role h3 {
+  font-family: Inter, sans-serif;
+  font-size: 10px;
+  color: #77b5e2;
+  margin-bottom: 7px;
+}
+.role p {
+  font-size: 12px;
+}
+.architecture {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+.architecture > div {
+  position: relative;
+  padding: 20px;
+  border: 1px solid var(--border);
+  background: #10223180;
+  border-radius: 7px;
+}
+.architecture > div > span {
+  font-size: 9px;
+  font-family: monospace;
+  color: var(--accent);
+}
+.architecture h3 {
+  font-size: 16px;
+  margin-block: 11px 8px;
+}
+.architecture p {
+  font-size: 11px;
+}
+.architecture svg {
+  position: absolute;
+  top: 20px;
+  right: 18px;
+  color: #5485ab;
+}
+.implementation {
+  border-left: 1px solid var(--border);
+  padding-left: 23px;
+  margin-top: 26px;
+}
+.implementation h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+.challenge {
+  display: flex;
+  gap: 14px;
+  padding-block: 18px;
+  border-bottom: 1px solid var(--border);
+}
+.challenge svg {
+  color: #84b4d8;
+  margin-top: 3px;
+}
+.challenge h3 {
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+.outcome {
+  padding: 25px;
+}
+.outcome h3 {
+  color: var(--bright);
+  font-size: 11px;
+  margin-block: 22px 9px;
+}
+.toc {
+  position: sticky;
+  top: 115px;
+  align-self: start;
+  border-left: 1px solid var(--border);
+  padding-left: 20px;
+}
+.toc p {
+  font-size: 9px;
+  color: var(--subtle);
+  letter-spacing: 0.13em;
+  margin-bottom: 16px;
+}
+.toc a {
+  display: block;
+  color: #a2b8cc;
+  font-size: 11px;
+  padding-block: 9px;
+}
+.toc a:hover {
+  color: var(--bright);
+}
+.toc :global(.text-link) {
+  display: flex;
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid var(--border);
+  font-size: 10px;
+}
+.next {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-block: 28px;
+  border-top: 1px solid var(--border);
+  gap: 20px;
+}
+.next > div > span {
+  display: block;
+  color: var(--subtle);
+  font-size: 9px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 9px;
+}
+.next a {
+  font-family: var(--heading);
+  font-size: 22px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.next a:hover {
+  color: var(--bright);
+}
+.next > a {
+  font-size: 11px;
+  color: var(--muted);
+}
+@media (max-width: 1100px) {
+  .hero {
+    gap: 28px;
+  }
+  .body {
+    grid-template-columns: minmax(0, 1fr) 155px;
+    gap: 30px;
+  }
+}
+@media (max-width: 767px) {
+  .hero {
+    grid-template-columns: 1fr;
+    gap: 25px;
+    margin-top: 30px;
+  }
+  .hero h1 {
+    font-size: 39px;
+  }
+  .heroVisual {
+    max-height: 235px;
+  }
+  .projectMeta {
+    grid-template-columns: 1fr 1fr;
+    gap: 22px;
+    margin-bottom: 32px;
+  }
+  .projectMeta > div:last-child {
+    grid-column: 1/-1;
+  }
+  .body {
+    grid-template-columns: 1fr;
+  }
+  .toc {
+    display: none;
+  }
+  .article section > h2 {
+    font-size: 23px;
+  }
+  .architecture {
+    grid-template-columns: 1fr;
+  }
+  .architecture > div {
+    padding: 18px;
+  }
+  .article section {
+    margin-bottom: 33px;
+  }
+  .next {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .next a {
+    font-size: 21px;
+  }
+  .next > a {
+    font-size: 11px;
+  }
+}

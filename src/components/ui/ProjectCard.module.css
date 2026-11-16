@@ -1,0 +1,144 @@
+.card {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(130deg, #142533ce, #0c1925);
+  border: 1px solid #87b3d626;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  transition:
+    transform 0.25s,
+    border-color 0.25s,
+    box-shadow 0.25s;
+  height: 100%;
+}
+.card:hover {
+  transform: translateY(-4px);
+  border-color: #3699ee88;
+  box-shadow: 0 12px 28px #0003;
+}
+.visual {
+  width: 100%;
+  aspect-ratio: 1.9;
+  object-fit: cover;
+  border-bottom: 1px solid var(--border);
+}
+.body {
+  padding: 22px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.meta {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  width: 100%;
+  align-items: center;
+  font-size: 9px;
+  letter-spacing: 0.12em;
+  color: var(--bright);
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+.title {
+  font-size: 20px;
+  letter-spacing: -0.04em;
+  line-height: 1.25;
+}
+.summary {
+  font-size: 12px;
+  line-height: 1.7;
+  color: var(--muted);
+  margin-block: 12px 20px;
+}
+.body :global(.tags) {
+  margin-top: auto;
+}
+.foot {
+  padding: 14px 22px;
+  border-top: 1px solid var(--border);
+  font-size: 10px;
+  color: #b6c9dc;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.compact {
+  display: grid;
+  grid-template-columns: 36% 1fr;
+  padding: 10px;
+  gap: 18px;
+  min-height: 177px;
+}
+.compact .visual {
+  height: 100%;
+  min-height: 155px;
+  aspect-ratio: auto;
+  border-radius: 6px;
+  border: 0;
+}
+.compact .body {
+  padding: 9px 6px 7px 0;
+}
+.compact .meta {
+  display: none;
+}
+.compact .title {
+  font-size: 16px;
+}
+.compact .summary {
+  font-size: 11px;
+  line-height: 1.65;
+  margin-block: 9px 12px;
+}
+.compact .foot {
+  display: none;
+}
+.compact :global(.tag) {
+  font-size: 9px;
+  padding: 4px 6px;
+}
+@media (min-width: 1750px) {
+  .compact .title {
+    font-size: 19px;
+  }
+  .compact .summary {
+    font-size: 13px;
+  }
+  .compact {
+    min-height: 190px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1170px) {
+  .compact {
+    display: flex;
+    padding: 0;
+    gap: 0;
+  }
+  .compact .visual {
+    min-height: 0;
+    height: 160px;
+    border-radius: 0;
+  }
+  .compact .body {
+    padding: 18px;
+  }
+}
+@media (max-width: 767px) {
+  .compact {
+    grid-template-columns: 32% 1fr;
+    gap: 14px;
+    min-height: 168px;
+  }
+  .compact .title {
+    font-size: 16px;
+  }
+  .compact .summary {
+    font-size: 11px;
+  }
+  .body {
+    padding: 20px;
+  }
+}
